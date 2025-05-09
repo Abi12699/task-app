@@ -1,0 +1,36 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child{
+    
+    height: 50%;
+    width:40%;
+    border: 2px solid black;
+    padding-left: 20px;
+    align-items: center;
+   
+    line-height: 30px;
+    
+    
+}
+
+
+input{
+    border: 2px solid black;
+    width: 90%;
+    height: 10%;
+    
+}
+button{
+    background-color: lightblue;
+    color: black;
+    height: 50px;
+    width: 90%;
+  
+}

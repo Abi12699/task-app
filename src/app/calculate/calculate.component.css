@@ -1,0 +1,33 @@
+.parents{
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child{
+    
+    height: 50%;
+    width:50%;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 40px;
+    
+}
+
+h3{
+    color: white;
+}
+
+input{
+    border: 2px solid black;
+    width: 300px;
+}
+button{
+    background-color: blue;
+    color: white;
+    height: 50px;
+  
+}
