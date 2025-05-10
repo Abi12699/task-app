@@ -1,16 +1,16 @@
 <div class="parents">
     <div class="child">
         <h3>Number 1 :</h3>
-        <input type="number">
+        <input type="number" [(ngModel)]="Number1">
 
         <h3>Number 2 :</h3>
-        <input type="number"> <br>
+        <input type="number" [(ngModel)]="Number2"> <br>
 
-        <button>Sum</button>
-        <button>Sub</button>
-        <button>Mul</button>
-        <button>Div</button>
+        <button (click)="sum()" [disabled]="(Number1==0)||(Number2==0)">Sum</button>
+        <button (click)="sub()" [disabled]="(Number1==0)||(Number2==0)">Sub</button>
+        <button (click)="mul()" [disabled]="(Number1==0)||(Number2==0)">Mul</button>
+        <button (click)="div()" [disabled]="(Number1==0)||(Number2==0)">Div</button>
 
-        <h2>Result</h2>
+        <h2>Result :{{result}}</h2>
     </div>
 </div>

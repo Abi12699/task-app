@@ -11,6 +11,8 @@ import { CalculateComponent } from './calculate/calculate.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
+import { FormsModule } from '@angular/forms';
+import { DirectiveComponent } from './directive/directive.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { BMIComponent } from './bmi/bmi.component';
     CalculateComponent,
     RectangleComponent,
     CircleComponent,
-    BMIComponent
+    BMIComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

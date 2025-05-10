@@ -8,6 +8,7 @@ import { CalculateComponent } from './calculate/calculate.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
+import { DirectiveComponent } from './directive/directive.component';
 
 const routes: Routes = [
 
@@ -36,10 +37,16 @@ const routes: Routes = [
   }] },
 
   {path:'mywebsite',component:MyWebsiteComponent,children:[{
-    path:'BMI',component:BMIComponent
-  }] },
+    path:'BMI',component:BMIComponent},
+    {path:'directive',component:DirectiveComponent}]}
 
-];
+
+]
+    
+  
+  
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

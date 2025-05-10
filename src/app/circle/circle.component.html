@@ -2,21 +2,21 @@
     <div class="child">
 
     <h3 style="text-align: center;">Raidus:</h3> 
-    <input type="Number">
+    <input type="Number" [(ngModel)]="number">
     
 
     <br>
     <br>
 
-    <button>Area</button> <br>
+    <button (click)="area()">Area</button> <br>
     <br>
-    <button>Perimeter</button>
+    <button (click)="perimeter()">Perimeter</button>
 
 
     <br>
     <br>
 
-    <h3 style="text-align: center;">Result:</h3>
+    <h3 style="text-align: center;">Result: {{result}}</h3>
     </div>
 </div>
 

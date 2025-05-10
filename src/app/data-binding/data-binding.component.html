@@ -1,1 +1,33 @@
-<p>data-binding works!</p>
+<h1>Data Binding</h1>
+<button (click)="greet()">Greet</button>
+<input type="text" (keyup)="typing()">
+
+<select (change)="state()" >
+    <option > Telanaga</option>
+    <option > Andhra Pradesh</option>
+    <option > Karnataka</option>
+    <option > Tamil Nadu</option>
+
+
+  
+</select>
+
+
+<!-- interpolation -->
+
+
+<h3>{{message}}</h3>
+
+
+<!-- Property Binding-->
+
+<input type="text" [disabled]="isDisabled">
+<input type="text" [value]="name">
+
+
+<!-- Two Way Binding-->
+
+<input type="text" [(ngModel)]="mobile"> <br>
+<button (click)="submit()"> Submit</button>
+
+

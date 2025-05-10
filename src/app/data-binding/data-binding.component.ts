@@ -7,4 +7,25 @@ import { Component } from '@angular/core';
 })
 export class DataBindingComponent {
 
+  message:string="Good Morning Everyone!";
+  isDisabled:boolean=true;
+  name:string='Dinesh'
+
+  mobile:string='+91'
+  submit(){
+    alert(this.mobile);
+  }
+
+  greet(){
+    alert("Good Morning")
+  }
+
+  typing(){
+    alert("Typing...........")
+  }
+
+  state(){
+    alert("State")
+  }
+
 }
