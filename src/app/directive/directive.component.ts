@@ -21,4 +21,6 @@ export class DirectiveComponent {
 
   ]
 
+  today:any=new Date();
+
 }

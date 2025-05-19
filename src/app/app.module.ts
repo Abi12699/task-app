@@ -11,8 +11,20 @@ import { CalculateComponent } from './calculate/calculate.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectiveComponent } from './directive/directive.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VechiclesComponent } from './vechicles/vechicles.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CreateVechicelComponent } from './create-vechicel/create-vechicel.component';
+import { StudentIdComponent } from './student-id/student-id.component';
+import { CreateStudentCardComponent } from './create-student-card/create-student-card.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { JohnDetailsComponent } from './john-details/john-details.component';
+import { LoginComponent } from './login/login.component';
+import { VechicleDetailsComponent } from './vechicle-details/vechicle-details.component';
+import { StudentCardComponent } from './student-card/student-card.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +37,25 @@ import { DirectiveComponent } from './directive/directive.component';
     RectangleComponent,
     CircleComponent,
     BMIComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    EmployeeComponent,
+    FlipkartComponent,
+    VechiclesComponent,
+    CreateVechicelComponent,
+    StudentIdComponent,
+    CreateStudentCardComponent,
+    CreateUserComponent,
+    JohnDetailsComponent,
+    LoginComponent,
+    VechicleDetailsComponent,
+    StudentCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

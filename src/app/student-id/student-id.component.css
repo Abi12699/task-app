@@ -1,0 +1,64 @@
+.parent{
+    /* display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto; */
+   
+}
+
+.head{
+    height: 15%;
+    width: 100%;
+    background-color: lightblue;
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.body{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+
+}
+
+
+
+
+.card-header{
+    display: flex;
+    justify-content: space-around;
+    background-color:lightsalmon;
+  
+}
+
+.card-body{
+    display: flex;
+}
+
+.data{
+    height: 100%;
+    width: 70%;
+}
+
+.image{
+  
+    height: 100%;
+    width: 30%;
+}
+
+.card-footer{
+    background-color: red;
+   display: flex;
+    justify-content: space-between;
+
+
+}
+
+
+    
+
+

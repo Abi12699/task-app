@@ -1,0 +1,96 @@
+<div class="parent">
+
+    <div class="head">
+
+    
+
+    <input type="text" placeholder="Search student" [(ngModel)]="keywords" (keyup)="search()" width="100px" height="100px"> <br>
+    
+    <label for="">SortColumn</label>
+    <select [(ngModel)]="column">
+        <option value="name"> Name</option>
+        <option value="dob"> DOB</option>
+
+       
+       
+        
+        </select>
+        <label for="">SortOrder</label>
+        
+        <select [(ngModel)]="order">
+        <option value="asc"> Ascending Order</option>
+        <option value="desc"> Descending Order</option>
+        
+        </select>
+
+    <br>
+
+    <button (click)="sort()"> Sort</button>
+
+
+
+    <select [(ngModel)]="limit">
+        <option value="5"> 5</option>
+        <option value="10"> 10</option>
+        <option value=" 30"> 30</option>
+        <option value="50">50</option>
+        
+        </select>
+        
+        <select [(ngModel)]="page">
+        <option value="1"> 1</option>
+        <option value="2"> 2</option>
+        <option value="3"> 3</option>
+        <option value="4"> 4</option>
+        
+        </select>
+        
+        <button (click)="pagination()"> Pagination</button>
+
+        <button routerLink="/mywebsite/createStudent" >Create Student</button>
+
+
+
+
+
+
+</div>
+  
+    <div class="body">
+    <div *ngFor="let Student of studentcard, let i=index" class="card border-success mb-3" style="width: 45%; height: 275px;">
+        <div class="card-header  border-success"><img src="{{Student.school_logo}}" alt="" width="75px" height="30px">
+        {{Student.name}}</div>
+        <div class="card-body text-success">
+
+        <div class="data">
+          <label >NAME:</label> {{Student.name}} <br> 
+          <label>PHONE:</label> {{Student.phone}} <br>
+          <label for="">DOB:</label> {{Student.dob}} <br>
+          <label for=""> CITY:</label>{{Student.city}} <br>
+          <label>EMAIL:</label> {{Student.email}} <br>
+
+          
+        </div>
+
+          <div class="image">
+
+            <img src="{{Student.profile_picture}}" alt="" width="130px" height="150px">
+
+
+          </div>
+
+         
+        </div>
+        <div class="card-footer border-success">
+            <label for="">School City:</label>{{Student.school_city}}   <label for="">School Pin:</label>{{Student.school_pin}} <br>
+
+            <button routerLink="/mywebsite/studentCard/{{Student.id}}">View</button>
+            <button>Edit</button>
+            <button (click)="delete(Student.id)">Delete</button>
+
+        </div>
+      </div>
+
+    </div>
+    
+</div>

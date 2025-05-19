@@ -1,0 +1,77 @@
+<input type="text" placeholder=" Enter txt to search" [(ngModel)]="keywords" (keyup)="search()">
+<select [(ngModel)]="column">
+<option value="Vehicle"> Vehicle Name</option>
+<option value="color"> Color</option>
+<option value=" Cost"> Cost</option>
+<option value="fuel">Fuel</option>
+
+</select>
+
+<select [(ngModel)]="order">
+<option value="asc"> Ascending Order</option>
+<option value="desc"> Descending Order</option>
+
+</select>
+
+<button (click)="sort()"> Sort</button> <br>
+<button routerLink="/mywebsite/create-vechicle">Create Vehicle</button>
+
+<!--Pagination-->
+
+<select [(ngModel)]="limit">
+    <option value="10"> 10</option>
+    <option value="20"> 20</option>
+    <option value=" 30"> 30</option>
+    <option value="50">50</option>
+    
+    </select>
+    
+    <select [(ngModel)]="page">
+    <option value="1"> 1</option>
+    <option value="2"> 2</option>
+    <option value="3"> 3</option>
+    <option value="4"> 4</option>
+    
+    </select>
+    
+    <button (click)="pagination()"> Pagination</button>
+
+
+<table border="1" class="table table-dark">
+    <thead>
+        <tr>
+            <th>Vechicle</th>
+            <th>Color</th>
+            <th>Fuel</th>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Tyre</th>
+            <th colspan="2">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vechicle of vehicles, let i=index">
+            <td>{{vechicle.Vehicle}}</td>
+            <td>{{vechicle.color}}</td>
+            <td>{{vechicle.fuel}}</td>
+            <td>{{vechicle.id}}</td>
+            <td><img src="{{vechicle.image}}" alt="" height="100px"></td>
+            <td>{{vechicle.manufacturer}}</td>
+            <td>{{vechicle.model}}</td>
+            <td>{{vechicle.type}}</td>
+            <td>{{vechicle.tyres}}</td>
+            <td><button class="btn btn-danger" (click)="delete(vechicle.id)">Delete</button></td>
+            <td>
+                <button class="btn btn-info" routerLink="/mywebsite/vechicle-details/{{vechicle.id}}">
+                    <i class="bi bi-eye-fill"></i>
+
+                </button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
