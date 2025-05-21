@@ -21,6 +21,13 @@ import { LoginComponent } from './login/login.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { VechicleDetailsComponent } from './vechicle-details/vechicle-details.component';
 import { StudentCardComponent } from './student-card/student-card.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingParentComponent } from './rating-parent/rating-parent.component';
+import { RatingChildComponent } from './rating-child/rating-child.component';
+import { TaskAreaComponent } from './task-area/task-area.component';
 
 const routes: Routes = [
 
@@ -62,6 +69,15 @@ const routes: Routes = [
     {path:"login", component:LoginComponent},
     {path:"vechicle-details/:id", component:VechicleDetailsComponent},
     {path:"studentCard/:id",component:StudentCardComponent},
+    {path:'edit-vechicle/:id', component:CreateVechicelComponent},
+    {path:"edit-Student/:id", component:CreateStudentCardComponent},
+    {path:"communication", component:CommunicationComponent},
+    {path:"child",component:ChildComponent},
+    {path:"sibling1", component:Sibling1Component},
+    {path:"sibling2" , component:Sibling2Component},
+    {path:"rating-parent" , component:RatingParentComponent},
+    {path:"rating-child" , component:RatingChildComponent},
+    {path:"task-area", component:TaskAreaComponent},
 
   ]}
 

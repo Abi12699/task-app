@@ -85,7 +85,7 @@
             <label for="">School City:</label>{{Student.school_city}}   <label for="">School Pin:</label>{{Student.school_pin}} <br>
 
             <button routerLink="/mywebsite/studentCard/{{Student.id}}">View</button>
-            <button>Edit</button>
+            <button routerLink="/mywebsite/edit-Student/{{Student.id}}">Edit</button>
             <button (click)="delete(Student.id)">Delete</button>
 
         </div>

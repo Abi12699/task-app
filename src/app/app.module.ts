@@ -25,6 +25,13 @@ import { JohnDetailsComponent } from './john-details/john-details.component';
 import { LoginComponent } from './login/login.component';
 import { VechicleDetailsComponent } from './vechicle-details/vechicle-details.component';
 import { StudentCardComponent } from './student-card/student-card.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingParentComponent } from './rating-parent/rating-parent.component';
+import { RatingChildComponent } from './rating-child/rating-child.component';
+import { TaskAreaComponent } from './task-area/task-area.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +55,14 @@ import { StudentCardComponent } from './student-card/student-card.component';
     JohnDetailsComponent,
     LoginComponent,
     VechicleDetailsComponent,
-    StudentCardComponent
+    StudentCardComponent,
+    CommunicationComponent,
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    RatingParentComponent,
+    RatingChildComponent,
+    TaskAreaComponent
   ],
   imports: [
     BrowserModule,

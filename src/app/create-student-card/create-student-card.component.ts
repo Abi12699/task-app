@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { StudentIdService } from '../student-id.service';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { VechicleService } from '../vechicle.service';
 
 @Component({
@@ -12,7 +12,29 @@ import { VechicleService } from '../vechicle.service';
 export class CreateStudentCardComponent {
   vehicleForm: any;
 
-  constructor(private _studentService:StudentIdService, private _router:Router){}
+  constructor(private _studentService:StudentIdService, private _router:Router, private _activatedRoute:ActivatedRoute){
+
+  _activatedRoute.params.subscribe((data:any)=>{
+    console.log(data.id);
+    this.id=data.id
+
+    if(this.id){
+      _studentService.getStudents(data.id).subscribe(
+      (data:any)=>{
+        console.log(data);
+        this.StudentForm.patchValue(data);
+
+      },(err:any)=>{
+        alert("Unable to fetch details")
+      }
+    )
+    }
+
+    
+  },(err:any)=>{
+    alert("Internal Server error")
+  })
+  }
 
   public StudentForm:FormGroup= new FormGroup({
     name:new FormControl(),
@@ -29,8 +51,23 @@ export class CreateStudentCardComponent {
     
 
   })
-
+id:any=""
   submit(){
+    if(this.id){
+
+      this._studentService.updateStudent(this.id,this.StudentForm.value).subscribe((data:any)=>{
+        console.log(data);
+        alert("Student Details Updated Successfully")
+        this._router.navigateByUrl("/mywebsite/studentID")
+      },(err:any)=>{
+        alert("Internal server error")
+      })
+
+
+
+
+
+    }else{
 
     console.log(this.StudentForm);
     this._studentService.createStudent(this.StudentForm.value).subscribe((data:any)=>{
@@ -45,5 +82,6 @@ export class CreateStudentCardComponent {
     
 
   }
+}
 
 }

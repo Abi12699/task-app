@@ -1,5 +1,6 @@
 <div class="parent">
-    <h2>New Student Form</h2>
+    <h2 *ngIf="!id">New Student Form</h2>
+     <h2 *ngIf="id">Edit Student Form</h2>
 
     <div class="child">
         <form [formGroup]="StudentForm">
